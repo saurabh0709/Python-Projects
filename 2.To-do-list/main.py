@@ -1,5 +1,6 @@
 import json
 
+# Function to load tasks from JSON file
 def load_tasks(filename):
     try:
         with open(filename,'r') as file:
@@ -9,10 +10,12 @@ def load_tasks(filename):
         tasks = []
     return tasks
 
+# Function to save tasks to JSOn file
 def save_task_to_file(tasks, filename='tasks.json'):
     with open(filename,'w') as file:
         json.dump(tasks, file, indent=4)
 
+# Function to view tasks
 def view_tasks(tasks):
     if not tasks:
         print('No tasks to show!')
@@ -22,6 +25,7 @@ def view_tasks(tasks):
         print(f"{index}. {task['task']} : {status}")
     print('\n')
 
+# Function to add a new task
 def add_new_task():
     task = input('Please enter your task: ')
     new_task = {
@@ -32,6 +36,7 @@ def add_new_task():
     save_task_to_file(tasks)
     print('Task Added successfully')
 
+# Function to mark task as completed
 def mark_as_completed(index):
     if 1 <= index <= len(tasks):
         tasks[index-1]['completed'] = True
@@ -40,6 +45,7 @@ def mark_as_completed(index):
     else:
         print('Invalid task index')
 
+# Function to delete a task
 def delete_task(index):
     if 1 <= index <= len(tasks):
         del tasks[index-1]
@@ -48,9 +54,11 @@ def delete_task(index):
     else:
         print('Invalid task index')
 
+# Function to exit the app
 def exit_app():
     print('Thanks for visiting!')
 
+# Main Menu function 
 def main_menu():
     while True:
         print('--------- Main Menu---------')
@@ -76,6 +84,7 @@ def main_menu():
         else:
             print('Please enter a valid choice!')
 
+# Function to ask for user's choice
 def users_choice():
     choice = int(input('Please enter your choice: '))
     return choice

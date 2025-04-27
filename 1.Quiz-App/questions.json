@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is the output of (2**3)?",
+        "options": {
+            "A": 5,
+            "B": 7,
+            "C": 6,
+            "D": 8
+        },
+        "answer": "D"
+    },
+    {
+        "question": "What is a correct syntax to output \"Hello World\" in Python?",
+        "options": {
+            "A": "p('Hello World')",
+            "B": "print('Hello World')",
+            "C": "echo 'Helo World' ",
+            "D": "echo ('Helo World') "
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of len(\"this is a string\")?",
+        "options": {
+            "A": 10,
+            "B": 16,
+            "C": 12,
+            "D": 15
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of (2**3)?",
+        "options": {
+            "A": 5,
+            "B": 7,
+            "C": 6,
+            "D": 8
+        },
+        "answer": "D"
+    }
+]
